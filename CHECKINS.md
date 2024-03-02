@@ -4,8 +4,11 @@ Use this file to commit information clearly documenting your check-ins' content.
 
 #### Brief description of your discussions within your team so far
 
-Had some ideas with regards to analyzing space complexity but much of brainstorming is still yet to be done and discucssed. 
+- Had some ideas with regards to analyzing space complexity but much of brainstorming is still yet to be done and discucssed. 
+- Also thought of an idea of using Infer to analyze errors within the code and creating a visualizer that states where these errors will occur and what type of error it is. Still a good amount of planning left to do
 
 #### Planned follow-up tasks 
 
-Will hold another couple meetings to further discuss the topic and route we want to go next week. 
+- Will hold another couple meetings to further discuss the topic and route we want to go next week.
+- Also will start looking at different analysis frameworks and see which one fits our use case the best
+- Finalize the idea we want to create the project around and start creating a timeline for which person will take on which task 
