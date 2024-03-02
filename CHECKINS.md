@@ -6,7 +6,7 @@ Use this file to commit information clearly documenting your check-ins' content.
 
 - Had some ideas with regards to analyzing space complexity but much of brainstorming is still yet to be done and discucssed. 
 - Also thought of an idea of using Infer to analyze errors within the code and creating a visualizer that states where these errors will occur and what type of error it is. Still a good amount of planning left to do
-- 
+- Could use concurrency analysis tools to visualize problem areas like deadlocks and give warnings for concurrently accessed/changed global variables.
 
 #### Planned follow-up tasks 
 
