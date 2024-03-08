@@ -14,3 +14,28 @@ Use this file to commit information clearly documenting your check-ins' content.
 - Also will start looking at different analysis frameworks and see which one fits our use case the best. Research about the tech stack of this project, and the pros & cons of different languages/ tools/ frameworks.
 - Finalize the idea we want to create the project around and start creating a timeline for which person will take on which task 
 - Brainstorm additional program properties to be analyzed (or review existing ones)
+
+## Check In 2
+
+#### Brief description of your planned program analysis (and visualisation, if applicable) ideas
+
+- We plan to create a program analysis tool for specific type checking such as NULLs, strings, ints, etc.
+- Visualization will be given user inputted code, to indicated where types may not align with the logic of the code
+
+#### Notes of any important changes/feedback from TA discussion
+
+- Our TA said not to have a general type checker but instead to create a type checker based on some types such as NULLs, Strings, Ints as that is easier to implement
+
+#### Any planned follow-up tasks or features still to design
+
+- Still need to discuss exact implementation strategy and how the visualization tool will actually look
+
+#### Planned division of main responsibilities between team members
+
+- Part of the group will work on using the libraries to perform the program analysis whereas the other part of the group will work on the visualization tool
+
+#### Summary of progress so far
+
+- Finalized our idea and will start implementing
+
+#### Roadmap for what should be done when, including specific goals for completion by future Milestones (propose at least three such goals per future Milestone, along with who will work on them; you can revise these later as needed)
