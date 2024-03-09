@@ -39,3 +39,18 @@ Use this file to commit information clearly documenting your check-ins' content.
 - Finalized our idea and will start implementing
 
 #### Roadmap for what should be done when, including specific goals for completion by future Milestones (propose at least three such goals per future Milestone, along with who will work on them; you can revise these later as needed)
+
+Check in 3 (week 10):
+- Split the team into groups (visualization and program analysis) and assign tasks for each group
+- Create mockups for visualization and program analysis (done by respective teams)
+- Complete first user study (done by Sahib)
+
+Check in 4 (week 11):
+- Create MVP and working implementation for program analysis tool (done by program analysis team)
+- Create MVP and working implementation for visualization (done by visualization team)
+- Incorporate feedback from first user study (Sahib)
+
+Check in 5 (week 12):
+- Test throughly (each team tests respective tool)
+- Create video (whichever team has already finished)
+- Incorpoate any final feedback from user studies (whichever team the feedback is for)
