@@ -38,6 +38,17 @@ Use this file to commit information clearly documenting your check-ins' content.
 
 - Finalized our idea and will start implementing
 
+## Check In 3
+
+#### Brief description of your discussions within your team so far
+- Selected tentative techstack (language & framework)
+- Researched on the framework and it's usage for this project
+- Created basic test cases for time complexity analyses and bootstrapped the project with starter code
+#### Planned follow-up tasks 
+- Create documentation for the project
+- Discuss the implementation details (in particular, the DSA required)
+
+
 #### Roadmap for what should be done when, including specific goals for completion by future Milestones (propose at least three such goals per future Milestone, along with who will work on them; you can revise these later as needed)
 
 Check in 3 (week 10):
