@@ -52,6 +52,58 @@ Switched up the entire design. We plan to create a static run time analyser. We 
 - Create documentation for the project
 - Discuss the implementation details (in particular, the DSA required)
 
+#### Mockup of how your project is planned to operate (as used for your first user study). Include any sketches/examples/scenarios.
+Below are functions and the run time they would output above the functions' implementations
+
+###### O(1)
+def example_function_constant(x):
+    result = 0
+    result += x
+    return result
+
+
+###### O(n)
+def example_function_linear(x):
+    result = 0
+    for i in range(x):
+        if x > 1:
+            result += i
+    return result
+
+
+###### O(n^2)
+def example_function_linear_quadratic2(x):
+    result = 0
+    for i in range(x):
+        example_function_linear(x)
+    return result
+
+
+###### O(n^3)
+def example_function_linear_quadratic(x):
+    result = 0
+    for i in range(x):
+        example_function_linear_quadratic(x)
+    return result
+
+
+###### possible edge case
+###### O(n)
+def example_function3(n):
+    result = 0
+    for i in range(n):
+        for j in range(0, 2):
+            result += 1
+    return result
+
+
+###### O(n^2)
+def example_function4(n):
+    result = 0
+    for i in range(n):
+        for j in range(n):
+            result += 1
+    return result
 
 #### Roadmap for what should be done when, including specific goals for completion by future Milestones (propose at least three such goals per future Milestone, along with who will work on them; you can revise these later as needed)
 
