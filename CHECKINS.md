@@ -40,10 +40,14 @@ Use this file to commit information clearly documenting your check-ins' content.
 
 ## Check In 3
 
+#### Any changes to original design
+Switched up the entire design. We plan to create a static run time analyser. We are creating this to help students who are taking Data Structure and Algorithms courses to figure out the run time of their application statically. 
+
 #### Brief description of your discussions within your team so far
-- Selected tentative techstack (language & framework)
+- Selected tentative techstack (language & framework) -> Python and its ast module.
 - Researched on the framework and it's usage for this project
 - Created basic test cases for time complexity analyses and bootstrapped the project with starter code
+
 #### Planned follow-up tasks 
 - Create documentation for the project
 - Discuss the implementation details (in particular, the DSA required)
