@@ -105,17 +105,24 @@ def example_function4(n):
             result += 1
     return result
 
+#### First User Study
+
+User was asked to create functions that did not contain a recursive call.
+
+They created firstly a factorial function and a linked list traversal function.
+![Screenshot 2024-03-15 at 4 15 15 PM](https://media.github.students.cs.ubc.ca/user/16895/files/4f384a57-fe3f-4234-ae99-065ce629f2c3)
+
+![Screenshot 2024-03-15 at 4 15 11 PM](https://media.github.students.cs.ubc.ca/user/16895/files/bdbe84f7-505c-4108-9d04-39a23eeda60e)
+
+User said that potentially if an explanation can be provided as to how that run time was formed, as well had issues in regards to importing libraries.
+
+
 #### Roadmap for what should be done when, including specific goals for completion by future Milestones (propose at least three such goals per future Milestone, along with who will work on them; you can revise these later as needed)
 
-Check in 3 (week 10):
-- Split the team into groups (visualization and program analysis) and assign tasks for each group
-- Create mockups for visualization and program analysis (done by respective teams)
-- Complete first user study (done by Sahib)
-
 Check in 4 (week 11):
-- Create MVP and working implementation for program analysis tool (done by program analysis team)
-- Create MVP and working implementation for visualization (done by visualization team)
-- Incorporate feedback from first user study (Sahib)
+- Create working implementation for program![Uploading Screenshot 2024-03-15 at 4.15.11 PM.png…]()
+ analysis tool (done by program analysis team)
+- Incorporate feedback from first user study 
 
 Check in 5 (week 12):
 - Test throughly (each team tests respective tool)
