@@ -1,4 +1,4 @@
-import typing
+from typing import *
 
 def complex(nums: List, s: str) -> None:
     for i in range(len(nums)):
