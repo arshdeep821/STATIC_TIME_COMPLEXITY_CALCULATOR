@@ -92,8 +92,10 @@ Classic binary search in a sorted array
 ###### O(nlogn)
 Classic mergesort
 
-###### O(n^k)
+###### O(k^n), exponential time complexity, where k is a constant
 Recursive implementation of the generation of the Fibonacci Sequence, without the use of dynamic programming (memoization)
+
+###### O(n^k), polynomial time complexity, where k is a constant
 
 ###### possible edge case
 ###### O(n)
