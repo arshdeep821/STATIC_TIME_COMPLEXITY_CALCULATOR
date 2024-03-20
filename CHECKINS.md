@@ -86,6 +86,14 @@ def example_function_linear_quadratic(x):
         example_function_linear_quadratic(x)
     return result
 
+###### O(logn)
+Classic binary search in a sorted array
+
+###### O(nlogn)
+Classic mergesort
+
+###### O(n^k)
+Recursive implementation of the generation of the Fibonacci Sequence, without the use of dynamic programming (memoization)
 
 ###### possible edge case
 ###### O(n)
