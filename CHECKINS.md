@@ -138,3 +138,24 @@ Check in 5 (week 12):
 - Test throughly (each team tests respective tool)
 - Create video (whichever team has already finished)
 - Incorpoate any final feedback from user studies (whichever team the feedback is for)
+
+
+## Check In 4
+
+
+#### Status of implementation so far.
+
+Implementation has passed its initial stage, functions that take linear time have been added, whether that be list, string or set functions. We are currently working on functions that take either O(nlongn) time like list.sort and functions that take in other functions. Moreoevr, we are evaluating how to give a little feedback as mentioned from the user study. 
+
+#### Plans for final user study.
+We plan to further work on our implementation before our final user study, as well as work on the specific guidelines on how a __ user would use our analyzer. 
+
+#### Planned timeline for the remaining days.
+As mentioned, working on functions that take either O(nlongn) time like list.sort and functions that take in other functions is our current agenda. From then on, we will also work on areas that can improve the complexity of our project. As well as have a testing tool. 
+
+#### Progress against the timeline planned for your team, including the specific goals you defined (originally as part of Check-in 2) for Check-in 4; any revisions to Check-in 5 goals.
+
+Check in 5 (week 12):
+- Test throughly (each team tests respective tool)
+- Create video (whichever team has already finished)
+- Incorpoate any final feedback from user studies (whichever team the feedback is for)
