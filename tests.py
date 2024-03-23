@@ -51,5 +51,5 @@ def example_function4(n):
     return result
 
 
-analyze_function(example_function_constant)
+# analyze_function(example_function_constant)
 # analyze_function(example_function2)

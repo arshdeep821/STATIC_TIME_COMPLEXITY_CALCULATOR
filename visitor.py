@@ -2,6 +2,8 @@ import ast
 
 list_functions_that_take_O_n = ['insert', 'remove', 'index', 'count', 'reverse', 'extend', 'clear', 'copy']
 
+list_functions_that_take_O_nlogn = ['sort']
+
 string_functions_that_take_O_n = ['join', 'split', 'replace', 'strip', 'rstrip', 'lstrip', 'upper', 'lower', 'title', 'capitalize', 'find', 'rfind', 'index', 'rindex', 'count', 'startswith', 'endswith', 'encode']
 
 set_functions_that_take_O_n = ['update', 'intersection_update', 'difference_update', 'intersection', 'union' 'clear', 'copy']
@@ -100,6 +102,8 @@ class MyVisitor(ast.NodeVisitor):
             if isinstance(node.func.value, ast.Name) and self.function_param_type[recent_func][variable_name] == 'List':
                 if node.func.attr in list_functions_that_take_O_n:
                     self.recursive_list.append(variable_name)
+                if node.func.attr in list_functions_that_take_O_nlogn:
+                    self.recursive_list.append(f"{variable_name}log({variable_name})")
 
             if isinstance(node.func.value, ast.Name) and self.function_param_type[recent_func][variable_name] == 'str':
                 if node.func.attr in string_functions_that_take_O_n:
