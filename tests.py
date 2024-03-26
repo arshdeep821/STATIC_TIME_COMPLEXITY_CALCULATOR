@@ -6,6 +6,22 @@ def example_function_constant(x):
     result += x
     return result
 
+# O(n)
+def example_slicing_linear(testList):
+    return list[:len(testList)//2]
+
+# O(n)
+def example_copy_linear(testList):
+    return testList.copy()
+
+# O(n)
+def example_insert_linear(testList):
+    testList.insert(len(testList//2, -1))
+    return list
+
+# O(n)
+def example_count_linear(testList):
+    return testList.count(-1)
 
 # O(n)
 def example_function_linear(x):
