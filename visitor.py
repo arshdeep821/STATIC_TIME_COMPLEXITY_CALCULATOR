@@ -127,14 +127,66 @@ class MyVisitor(ast.NodeVisitor):
 
     
     def visit_Compare(self, node):
+        # print(ast.dump(node))
 
         for op in node.ops:
-            variable_name = node.comparators[0].id
-            most_recent_function_defined = self.function_defs[-1]
-            if isinstance(op, ast.In) and self.function_param_type[most_recent_function_defined][variable_name] == 'List':
-                self.recursive_list.append(node.comparators[0].id)
-            elif isinstance(op, ast.In) and self.function_param_type[most_recent_function_defined][variable_name] == 'str': 
-                self.recursive_list.append(node.comparators[0].id)
+            # if isinstance(op, (ast.Eq, ast.NotEq, ast.Gt, ast.Lt, ast.GtE, ast.LtE)):
+            #     continue
+
+            try:
+                variable_name = node.comparators[0].id
+                most_recent_function_defined = self.function_defs[-1]
+                if isinstance(op, (ast.Eq, ast.NotEq, ast.Gt, ast.Lt, ast.GtE, ast.LtE)) and self.function_param_type[most_recent_function_defined][variable_name] == 'str':
+                    self.recursive_list.append(node.comparators[0].id)
+                    continue
+            except:
+                pass
+
+            try:
+                variable_name = node.comparators[0].id
+                most_recent_function_defined = self.function_defs[-1]
+                if isinstance(op, (ast.Eq, ast.NotEq, ast.Gt, ast.Lt, ast.GtE, ast.LtE)) and self.function_param_type[most_recent_function_defined][variable_name] == 'List':
+                    self.recursive_list.append(node.comparators[0].id)
+                    continue
+            except:
+                pass
+
+            try:
+                variable_name = node.comparators[0].id
+                most_recent_function_defined = self.function_defs[-1]
+                if isinstance(op, (ast.Eq, ast.NotEq, ast.Gt, ast.Lt, ast.GtE, ast.LtE)) and self.function_param_type[most_recent_function_defined][variable_name] == 'Tuple':
+                    self.recursive_list.append(node.comparators[0].id)
+                    continue
+            except:
+                pass
+
+            try:
+                variable_name = node.comparators[0].id
+                most_recent_function_defined = self.function_defs[-1]
+                if isinstance(op, (ast.Eq, ast.NotEq, ast.Gt, ast.Lt, ast.GtE, ast.LtE)) and self.function_param_type[most_recent_function_defined][variable_name] == 'Set':
+                    self.recursive_list.append(node.comparators[0].id)
+                    continue
+            except:
+                pass                
+
+            try:
+                if node.comparators[0].func.id == "range" or node.comparators[0].func.id == "len":
+                    continue
+            except:
+                pass
+    
+
+            try:
+                variable_name = node.comparators[0].id
+                most_recent_function_defined = self.function_defs[-1]
+                if isinstance(op, ast.In) and self.function_param_type[most_recent_function_defined][variable_name] == 'List':
+                    self.recursive_list.append(node.comparators[0].id)
+                elif isinstance(op, ast.In) and self.function_param_type[most_recent_function_defined][variable_name] == 'str': 
+                    self.recursive_list.append(node.comparators[0].id)
+                elif isinstance(op, ast.In) and self.function_param_type[most_recent_function_defined][variable_name] == 'Tuple':
+                    self.recursive_list.append(node.comparators[0].id)
+            except:
+                pass
             
         self.generic_visit(node) 
 

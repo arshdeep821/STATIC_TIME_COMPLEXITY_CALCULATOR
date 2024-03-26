@@ -18,3 +18,18 @@ def form_3(nums: List):
     for i in range(len(nums)):
         # Add logic
 ```
+
+- Everything that takes changes time complexity must be interms of a parameter
+- When doing ==, !=, <, >, <=, >= the function parameter must be on the right hand-side
+
+```python
+1 == int
+
+"hello" == string
+
+[1, 2, 3] == list
+
+(1, 2, 3) == tuple
+
+{1, 2, 3} == set
+```
