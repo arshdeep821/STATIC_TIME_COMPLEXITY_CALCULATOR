@@ -1,9 +1,9 @@
 ### Restrictions to this time complexity calculator
 
-- All function params must have types of either int, str, List, Tuple Set, Dict
-- All logic must be defined in a function, can have functions in a class if you want
-- No while loops or recursion (functions cannot call other user-defined functions)
-- for loops must only run over list, range(int), or range(len(list))
+- The time complexity of each function will be analyzed individually
+- Function params can have types of either int, str, List, Tuple Set, Dict
+- Functions can use for loops, conditional statements, and most built in Python functions
+- For loops must only run over list, range(int), or range(len(list)) where int and list are function parameters.
 
 ```python
 def form_1(nums: List):
@@ -19,17 +19,5 @@ def form_3(nums: List):
         # Add logic
 ```
 
-- Everything that takes changes time complexity must be interms of a parameter
-- When doing ==, !=, <, >, <=, >= the function parameter must be on the right hand-side
-
-```python
-1 == int
-
-"hello" == string
-
-[1, 2, 3] == list
-
-(1, 2, 3) == tuple
-
-{1, 2, 3} == set
-```
+- All operations that change the time complexity (for loops or built-in function) must be over a function parameter.
+- Stretch Goal: Allow functions to call other user defined function.
