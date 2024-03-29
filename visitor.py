@@ -99,25 +99,25 @@ class MyVisitor(ast.NodeVisitor):
             # print('Function call')
             recent_func = self.function_defs[-1]
             variable_name = node.func.value.id
-            if isinstance(node.func.value, ast.Name) and self.function_param_type[recent_func][variable_name] == 'List':
+            if isinstance(node.func.value, ast.Name) and variable_name in self.function_param_type[recent_func] and self.function_param_type[recent_func][variable_name] == 'List':
                 if node.func.attr in list_functions_that_take_O_n:
                     self.recursive_list.append(variable_name)
                 if node.func.attr in list_functions_that_take_O_nlogn:
                     self.recursive_list.append(f"{variable_name}log({variable_name})")
 
-            if isinstance(node.func.value, ast.Name) and self.function_param_type[recent_func][variable_name] == 'str':
+            if isinstance(node.func.value, ast.Name) and variable_name in self.function_param_type[recent_func] and self.function_param_type[recent_func][variable_name] == 'str':
                 if node.func.attr in string_functions_that_take_O_n:
                     self.recursive_list.append(variable_name)
                     
-            if isinstance(node.func.value, ast.Name) and self.function_param_type[recent_func][variable_name] == 'Set':
+            if isinstance(node.func.value, ast.Name) and variable_name in self.function_param_type[recent_func] and self.function_param_type[recent_func][variable_name] == 'Set':
                 if node.func.attr in set_functions_that_take_O_n:
                     self.recursive_list.append(variable_name)
                     
-            if isinstance(node.func.value, ast.Name) and self.function_param_type[recent_func][variable_name] == 'Dict':
+            if isinstance(node.func.value, ast.Name) and variable_name in self.function_param_type[recent_func] and self.function_param_type[recent_func][variable_name] == 'Dict':
                 if node.func.attr in dictionary_functions_that_take_O_n:
                     self.recursive_list.append(variable_name)
 
-            if isinstance(node.func.value, ast.Name) and self.function_param_type[recent_func][variable_name] == 'Tuple':
+            if isinstance(node.func.value, ast.Name) and variable_name in self.function_param_type[recent_func] and self.function_param_type[recent_func][variable_name] == 'Tuple':
                 if node.func.attr in tuple_functions_that_take_O_n:
                     self.recursive_list.append(variable_name)
 
