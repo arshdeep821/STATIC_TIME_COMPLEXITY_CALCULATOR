@@ -161,3 +161,24 @@ Check in 5 (week 12):
 - Test throughly (each team tests respective tool)
 - Create video (whichever team has already finished)
 - Incorpoate any final feedback from user studies (whichever team the feedback is for)
+
+## Check In 5
+
+#### User Study 
+
+After informing the user of our Project and the use of it, we introducted the restrictions and allowed them to think about the type of functions the user wanted to test, some that they would be using regularly and likely to code. The user decided to go with two problems that can be found on Leetcode. 
+
+<img width="439" alt="Screenshot 2024-03-29 at 2 29 28 PM" src="https://media.github.students.cs.ubc.ca/user/16895/files/c95e94a3-42fe-4297-92e2-bc8fa557f052">
+
+The first function was the well-known Two Sum problem, user was very happy with this as not only did he not have to make any changes to how they would normally code but as well as the ease of using our static analyser. User also appreciated that the labels of the big O notation was layed out as it may be confusing otherwise. Lastly, we questioned the user with a query from the former user study and that was whether they would want a quick explanation of how the notation was computed but the user did not seem to mind as they stated that they did not feel the need for an explanation and was just nice to have that quick and easy response. 
+
+<img width="482" alt="Screenshot 2024-03-29 at 2 47 16 PM" src="https://media.github.students.cs.ubc.ca/user/16895/files/c86ff839-a063-4847-8f2d-54fad7894c78">
+
+<img width="487" alt="Screenshot 2024-03-29 at 2 29 05 PM" src="https://media.github.students.cs.ubc.ca/user/16895/files/896f2785-b64e-4e28-bfa9-84e0f7eac0d4">
+
+Second function is a function called Is Valid, given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid. The first screenshot is the first attempt at trying to decipher the run-time but realised that the List stack had to be in the parameters for the function to run. Realising this issue, we immediately corrected the implementation as the list, stack, did not take significant time in terms of Big O and our restrictions are that anything that takes significant time complexity must be a function param. After the adjustment, the user was able to use the second screenshot and was happy with the results. 
+
+All in all, user was happy with the results of both functions, especially the ease and the range of functions applicable of being used. Moreover, after considering their thoughts on the need of an explanation of the final Big O, we have decided to not go with the first user study's comments on providing that explanation. 
+
+
+
