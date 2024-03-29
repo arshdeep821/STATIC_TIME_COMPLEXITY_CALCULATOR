@@ -180,5 +180,7 @@ Second function is a function called Is Valid, given a string s containing just 
 
 All in all, user was happy with the results of both functions, especially the ease and the range of functions applicable of being used. Moreover, after considering their thoughts on the need of an explanation of the final Big O, we have decided to not go with the first user study's comments on providing that explanation. 
 
+#### Planned Timeline + Final Video 
 
+Timeline is going accordingly, with only two features being yet to settle and test, being able to call user-defined functions as well as array/string slicing. Once that has been accomplished, we will go ahead with recording the video where we will not only talk about the motivation behind this project, both user studies but as well as the implementation and how this project can be used and further worked upon. 
 
