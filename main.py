@@ -16,4 +16,4 @@ def do_from_file(file_path):
 # do_from_file("test.py")
 # do_from_file("tests/testSort.py")
 # do_from_file("tests/test_if.py")
-do_from_file("tests/leet_code_questions.py")
+do_from_file("tests/array_hashing.py")
