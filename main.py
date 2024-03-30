@@ -13,7 +13,6 @@ def do_from_file(file_path):
         file_contents = file.read()
     do_from_string(file_contents)
 
-# do_from_file("test.py")
 # do_from_file("tests/testSort.py")
 # do_from_file("tests/test_if.py")
-do_from_file("tests/array_hashing.py")
+do_from_file("tests/user_functions.py")

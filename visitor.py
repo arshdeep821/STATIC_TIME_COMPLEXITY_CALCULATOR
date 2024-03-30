@@ -28,6 +28,7 @@ class MyVisitor(ast.NodeVisitor):
         # print out the results
         for function_name, time_complexity_as_variable_names in self.function_result.items():
             self.print_time_complexity(function_name, time_complexity_as_variable_names)
+            print()
 
     # for function defintions
     def visit_FunctionDef(self, node):
@@ -40,8 +41,6 @@ class MyVisitor(ast.NodeVisitor):
             param_name = param.arg
             param_type = param.annotation.id
             self.function_param_type[function_name][param_name] = param_type
-        
-
         self.generic_visit(node)
 
         self.function_result[function_name] = f"O({'+'.join(list(set(self.recursive_list)))})"
@@ -93,7 +92,7 @@ class MyVisitor(ast.NodeVisitor):
     
     # for function cal's my_function(10,20)
     def visit_Call(self, node):
-        function_name = node.func.id if isinstance(node.func, ast.Name) else node.func.attr
+        # function_name = node.func.id if isinstance(node.func, ast.Name) else node.func.attr
 
         if isinstance(node.func, ast.Attribute): # Check if it's a method call
             # print('Function call')
@@ -121,6 +120,33 @@ class MyVisitor(ast.NodeVisitor):
                 if node.func.attr in tuple_functions_that_take_O_n:
                     self.recursive_list.append(variable_name)
 
+        if isinstance(node.func, ast.Name) and node.func.id != 'print': # Check to see if its a function call 
+            # print(f"{node.func.id} detected ----- in {self.function_defs[-1]}")
+            
+            current_func = self.function_defs[-1]
+            detected_func = node.func.id
+            
+            # original parameters in detected_func
+            original_param = self.function_param_type[detected_func] 
+            
+            # new_param is the original paramaters with the function name in front of it
+            new_param = {f"{detected_func}_{key}": value for key, value in original_param.items()}
+            
+            # placeholder for result_runtime, need to swap the names
+            modified_result = self.function_result[detected_func]
+            # for each paramater
+            for original_key in original_param.keys():
+                new_key = f"{detected_func}_{original_key}"
+                modified_result = modified_result.replace(original_key, new_key)
+
+            # updating the current_func's params and run time
+            self.recursive_list.append(modified_result[2:-1]) 
+            self.function_param_type[current_func].update(new_param)
+
+
+            
+
+            
         
     def visit_If(self, node):
         self.generic_visit(node)
