@@ -120,9 +120,9 @@ class MyVisitor(ast.NodeVisitor):
                 if node.func.attr in tuple_functions_that_take_O_n:
                     self.recursive_list.append(variable_name)
 
-        if isinstance(node.func, ast.Name) and node.func.id != 'print': # Check to see if its a function call 
+        if isinstance(node.func, ast.Name) and node.func.id in self.function_defs: # Check to see if its a function call 
             # print(f"{node.func.id} detected ----- in {self.function_defs[-1]}")
-            
+            # print(f"currently the defs {self.function_defs}")
             current_func = self.function_defs[-1]
             detected_func = node.func.id
             
@@ -142,11 +142,6 @@ class MyVisitor(ast.NodeVisitor):
             # updating the current_func's params and run time
             self.recursive_list.append(modified_result[2:-1]) 
             self.function_param_type[current_func].update(new_param)
-
-
-            
-
-            
         
     def visit_If(self, node):
         self.generic_visit(node)
@@ -251,5 +246,9 @@ class MyVisitor(ast.NodeVisitor):
                 print(f"{new_param_name} = size of dictionary parameter `{param}`")
             elif param_type == "Tuple":
                 print(f"{new_param_name} = size of tuple parameter `{param}`")
+        if time_complexity_as_variable_names  == "O()":
+            print(f"Time complexity of function `{function_name}` is O(1)")
+        else:
+            print(f"Time complexity of function `{function_name}` is {time_complexity_as_variable_names}")
 
-        print(f"Time complexity of function `{function_name}` is {time_complexity_as_variable_names}")
+        # print(f"Time complexity of function `{function_name}` is {time_complexity_as_variable_names}")

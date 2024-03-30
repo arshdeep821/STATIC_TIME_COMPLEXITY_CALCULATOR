@@ -1,5 +1,9 @@
 from typing import *
 
+def function0():
+    i = 0
+    print(i)
+
 def function1(first: List) -> None:
     for i in range(len(first)):
         i = i + 1
@@ -11,6 +15,7 @@ def function2(second: List) -> None:
 def function3(third: List) -> None:
     function1(third)
     function2(third)
+    function0()
     
 def function4(fourth: List) -> None:
     for i in range(len(fourth)):
