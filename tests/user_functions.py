@@ -28,3 +28,10 @@ def function5(fifth: List) -> None:
 def function6(sixth: List) -> None:
     for i in range(len(sixth)):
         function4(sixth)
+
+def function7(arr: List) -> None:
+    return arr.sort()
+
+def function8(nums: List) -> None:
+    for i in range(len(nums)):
+        function7(nums)

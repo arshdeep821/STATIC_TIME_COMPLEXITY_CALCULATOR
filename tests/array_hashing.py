@@ -35,18 +35,19 @@ def isAnagram(s: str, t: str) -> bool:
     return mapS == mapT
 
 ## O(a)
-def twoSum(nums: List, target: int) -> None:
+class TwoSum:
+    def twoSum(self: TwoSum, nums: List, target: int) -> None:
 
-    elem_map = {}
-    for i in range(len(nums)):
-        n = nums[i]
-        diff = target - n
-        if diff in elem_map:
-            return [elem_map[diff], i]
-        else:
-            elem_map[n] = i
+        elem_map = {}
+        for i in range(len(nums)):
+            n = nums[i]
+            diff = target - n
+            if diff in elem_map:
+                return [elem_map[diff], i]
+            else:
+                elem_map[n] = i
 
-    return -1
+        return -1
 
 
 # Does not work right now due to difference in for loop

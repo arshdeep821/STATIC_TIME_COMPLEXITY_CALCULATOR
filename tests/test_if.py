@@ -73,12 +73,6 @@ def greater_than_or_equal(n: int, i: int) -> None:
     else:
         return False
     
-# O() -> O(1)
-def greater_than_or_equal(n: int, i: int) -> None:
-    if n >= i:
-        return True
-    else:
-        return False
     
 # O() -> O(1)
 def less_than_or_equal(n: int, i: int) -> None:
