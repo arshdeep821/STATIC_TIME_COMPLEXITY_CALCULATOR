@@ -35,3 +35,40 @@ def function7(arr: List) -> None:
 def function8(nums: List) -> None:
     for i in range(len(nums)):
         function7(nums)
+
+# O(a + b)
+def function9(nums1: List, nums2: List) -> None:
+    for i in range(nums1):
+        pass
+    for i in range(nums2):
+        pass
+
+# O(a(b + c))
+def function10(arr: List) -> None:
+    for i in range(len(arr)):
+        function9(arr, arr)
+
+# O(a(b))
+def function11(nums1: List, nums2: List) -> None:
+    for i in range(nums1):
+        for i in range(nums2):
+            pass
+
+# O(a(b(c)))
+def function12(arr1: List, arr2: List) -> None:
+    for i in range(len(arr1)):
+        function11(arr1, arr2)
+
+def function13(nums1: List, nums2: List) -> None:
+    # O(a + b)
+    for i in range(len(nums1)):
+        pass
+    for i in range(len(nums2)):
+        pass
+
+def function14(arr1: List, arr2: List) -> None:
+    # (a(d + c) + b(c + d))
+    for i in range(len(arr1)):
+        function13(arr1, arr1)
+    for i in range(len(arr2)):
+        function13(arr1, arr1)
