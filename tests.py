@@ -9,7 +9,7 @@ def example_function_constant(x: int):
 
 # O(n)
 def example_slicing_linear(testList: List):
-    return list[:len(testList)//2]
+    return testList[len(testList)//2:]
 
 # O(n)
 def example_copy_linear(testList: List):
@@ -17,8 +17,8 @@ def example_copy_linear(testList: List):
 
 # O(n)
 def example_insert_linear(testList: List):
-    testList.insert(len(testList//2, -1))
-    return list
+    testList.insert(len(testList)//2, -1)
+    return testList
 
 # O(n)
 def example_count_linear(testList: List):
