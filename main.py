@@ -16,11 +16,11 @@ def do_from_file(file_path):
 # do_from_file("test.py")
 # do_from_file("tests/testSort.py")
 # do_from_file("tests/test_if.py")
-# do_from_file("tests/user_functions.py")
+do_from_file("tests/user_functions.py")
 # do_from_file("tests/array_hashing.py")
 # do_from_file("tests/two_pointers.py")
 # do_from_file("tests/sliding_window.py")
 # do_from_file("tests/stack.py")
 # do_from_file("tests/1d_dynamic_programming.py")
 
-do_from_file("tests.py")
+# do_from_file("tests.py")

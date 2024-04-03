@@ -140,8 +140,9 @@ class MyVisitor(ast.NodeVisitor):
                 modified_result = modified_result.replace(original_key, new_key)
 
             # updating the current_func's params and run time
-            self.recursive_list.append(modified_result[2:-1]) 
-            self.function_param_type[current_func].update(new_param)
+            if len(modified_result[2:-1]): # this "if" ensures the function is not O(1)
+                self.recursive_list.append(modified_result[2:-1]) 
+                self.function_param_type[current_func].update(new_param)
         
         self.generic_visit(node)
         
