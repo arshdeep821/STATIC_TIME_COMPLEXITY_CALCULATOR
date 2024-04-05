@@ -217,11 +217,9 @@ class MyVisitor(ast.NodeVisitor):
 
     # for array indexing syntax, e.g. array[0:4:-1]
     def visit_Subscript(self, node):
-        if isinstance(node.slice, ast.Tuple):
-            slices = node.slice.dims # e.g. s[::-1], dims would be [-1]
-            if len(slices) == 1 and slices[0].upper is None and isinstance(slices[0], ast.Slice):
-                if isinstance(node.value, ast.Constant):
-                    self.recursive_list.append(node.value)
+        
+        if isinstance(node.slice, ast.Slice):
+            self.recursive_list.append(node.value.id)
 
         self.generic_visit(node)
 
