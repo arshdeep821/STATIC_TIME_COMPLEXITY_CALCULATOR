@@ -22,6 +22,7 @@ def do_from_file(file_path):
 # do_from_file("tests/sliding_window.py")
 # do_from_file("tests/stack.py")
 # do_from_file("tests/1d_dynamic_programming.py")
-do_from_file("tests/test_slicing.py")
+# do_from_file("tests/test_slicing.py")
+do_from_file("tests/test_math_simplification.py")
 
 # do_from_file("tests.py")

@@ -20,6 +20,7 @@ class MyVisitor(ast.NodeVisitor):
         self.function_param_type = {} # {'sum_list': {'nums': 'List'}, 'get_list': {'x': 'int'}}
         self.function_result = {} # {function_name: "expression in terms of variable names"}
         self.recursive_list = []
+        self.multiplied_variables = set()
         self.function_defs = []
         
     
@@ -34,6 +35,7 @@ class MyVisitor(ast.NodeVisitor):
     def visit_FunctionDef(self, node):
 
         self.recursive_list = []
+        self.multiplied_variables = set()
         function_name = node.name
         self.function_param_type[function_name] = {}
         self.function_defs.append(function_name)
@@ -42,6 +44,10 @@ class MyVisitor(ast.NodeVisitor):
             param_type = param.annotation.id
             self.function_param_type[function_name][param_name] = param_type
         self.generic_visit(node)
+
+        # filter out multiplied variables. This simplifies O(nm+n) -> O(nm)
+        for multiplied_variable in self.multiplied_variables:
+            self.recursive_list.remove(multiplied_variable)
 
         self.function_result[function_name] = f"O({'+'.join(list(set(self.recursive_list)))})"
         self.recursive_list = []
@@ -84,6 +90,7 @@ class MyVisitor(ast.NodeVisitor):
         if len(inner_variables_set):
             result = iterating_variable_name + "(" + "+".join(list(inner_variables_set)) + ")"
             self.recursive_list.append(result)
+            self.multiplied_variables.add(iterating_variable_name)
         else:
             self.recursive_list.append(iterating_variable_name)
 
@@ -103,6 +110,7 @@ class MyVisitor(ast.NodeVisitor):
                     self.recursive_list.append(variable_name)
                 if node.func.attr in list_functions_that_take_O_nlogn:
                     self.recursive_list.append(f"{variable_name}log({variable_name})")
+                    self.multiplied_variables.add(variable_name) # this simplifies O(nlogn + n) -> O(nlogn)
 
             if isinstance(node.func.value, ast.Name) and variable_name in self.function_param_type[recent_func] and self.function_param_type[recent_func][variable_name] == 'str':
                 if node.func.attr in string_functions_that_take_O_n:
