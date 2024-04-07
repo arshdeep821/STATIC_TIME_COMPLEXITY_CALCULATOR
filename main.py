@@ -28,5 +28,6 @@ def do_from_file(file_path):
 # do_from_file("tests.py")
 
 print("This is a static time complexity program analysis tool.")
-file_name = input("Please input a file name: ")
+file_name = input("Please input a file name and click enter: ")
+print(" ")
 do_from_file(file_name)

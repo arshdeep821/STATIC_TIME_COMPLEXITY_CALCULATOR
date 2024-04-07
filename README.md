@@ -37,10 +37,10 @@ Overall we think at each stage the work was completed in an efficient manner, ev
 
 1. Make sure to have python or python3 installed on computer
 2. Clone Repository
-3. Create a python file in root directory that consists of functions you want to know the time complexity of
-4. Go to main.py in the root directory of the project
-5. Add the **file path** to the function *do_from_file(file_path)*
-6. Open a terminal that is in the root directory of the project and run **python main.py** or if you have a mac then **python3 main.py**
+3. Create a python file in root directory that consists of functions you want to know the time complexity of (make sure params have types of str, int, List, Tuple, Set, Dict)
+4. Open a terminal that is in the root directory of the project and run **python main.py** or if you have a mac then **python3 main.py**
+5. You will be prompted to enter the file name of the file you are trying to analyzer, please add it and click enter
+6. A list of complexities should be rendered along side function details
 
 ### Example:
 
@@ -57,22 +57,20 @@ def containsDuplicate(nums: List) -> bool:
         s.add(num)
     return False
 ```
-- Call do_from_file("test_functions.py") in main.py, add this line to the bottom of the file
 
-```python
-do_from_file("test_functions.py")
-
-```
 - Run main.py using **python** or **python3**
 
 ```zsh
 python3 main.py
 ```
 
-- Output should be in the terminal you ran the file in. Here's what it will look like:
+- An input in the terminal should pop up and prompt you to enter the file name and click enter
+- Here's what it will look like:
 
 ```zsh
 arshdeepjaggo@Arshdeeps-MacBook-Air Group11Project2 % python3 main.py
+This is a static time complexity program analysis tool.
+Please input a file name and click enter: test_functions.py
 
 a = size of list parameter `nums`
 Time complexity of function `containsDuplicate` is O(a)
