@@ -23,9 +23,6 @@ SAHIB DID THIS
 
 Overall we think at each stage the work was completed in an efficient manner, everything we wanted is in this analyzer in the time we had
 
-#### Analysis of User Study Results:
-
-SAHIB DID THIS
 
 #### Negative Points in our design/implementation and some solutions we implented:
 
