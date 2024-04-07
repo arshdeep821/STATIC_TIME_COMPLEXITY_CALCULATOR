@@ -2,13 +2,14 @@ from typing import List
 
 # features: nested for loop
 # Expected: O(a(b))
-def demo_for_loop(lst1: List, lst2: List) -> List:
+def demo_for_loop(lst1: List, lst2: List, num: int) -> List:
 
     result = 0
 
     for i in range(len(lst1)):
-        for num in lst2:
-            result += i * num
+        for k in lst2:
+            for j in range(num):
+                result += i * j * k
     
     return lst1
 
@@ -17,7 +18,7 @@ def demo_for_loop(lst1: List, lst2: List) -> List:
 # Expected: O(aloga)
 def demo_if_statement(lst1: List, element: int) -> List:
 
-    lst = lst[::-1]
+    lst1 = lst1[::-1]
 
     if element in lst1:
         lst1.sort()
