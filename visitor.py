@@ -47,8 +47,8 @@ class MyVisitor(ast.NodeVisitor):
 
         # filter out multiplied variables. This simplifies O(nm+n) -> O(nm)
         for multiplied_variable in self.multiplied_variables:
-            self.recursive_list.remove(multiplied_variable)
-
+            self.recursive_list = [num for num in self.recursive_list if num != multiplied_variable]
+        
         self.function_result[function_name] = f"O({'+'.join(list(set(self.recursive_list)))})"
         self.recursive_list = []
                     
