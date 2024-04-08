@@ -2,7 +2,7 @@
 
 - The time complexity of each function will be analyzed individually
 - Function params must have types of either int, str, List, Tuple Set, Dict only
-- Functions can use for loops, conditional statements, and most built in Python functions, or call other user implemented functions in a non-circular way
+- Functions can use for loops, conditional statements, and most built in Python functions, and call other user implemented functions in a non-circular way
 - For loops must only run over list, range(int), or range(len(list)) where int and list are function parameters.
 
 ```python
