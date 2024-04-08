@@ -1,7 +1,7 @@
 from typing import List
 
 # features: nested for loop
-# Expected: O(a(b))
+# Expected: O(a(b(c)))
 def demo_for_loop(lst1: List, lst2: List, num: int) -> List:
 
     result = 0
@@ -12,7 +12,6 @@ def demo_for_loop(lst1: List, lst2: List, num: int) -> List:
                 result += i * j * k
     
     return lst1
-
 
 # features: if statement, slicing, math simplification (dropping constants)
 # Expected: O(aloga)
@@ -27,9 +26,8 @@ def demo_if_statement(lst1: List, element: int) -> List:
 
     return lst1
 
-
 # features: calling other functions
-# Expected: O(1)
+# Expected: O(a)
 def function1(lst: List) -> List:
     return lst[::-1]
 
@@ -50,8 +48,6 @@ def containsDuplicate(nums: List) -> bool:
             return True
         s.add(num)
     return False
-
-############## could also add this next option for sets
 
 # features: Set, for loop, if statement, while loop (LeetCode 3)
 # Expected: O(a)
@@ -89,8 +85,6 @@ def isAnagram(s: str, t: str) -> bool:
             mapT[t[i]] = 1
     
     return mapS == mapT
-
-############## could also add this next option for sets
 
 # features: Dict, for loop, if statement (LeetCode 424)
 # Expected: O(a)
