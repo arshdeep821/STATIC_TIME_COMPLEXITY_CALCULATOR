@@ -1,4 +1,4 @@
-# Time Complexity Calculator - Static 
+# Python Time Complexity Calculator - Static 
 
 ## Original Motivation
 
