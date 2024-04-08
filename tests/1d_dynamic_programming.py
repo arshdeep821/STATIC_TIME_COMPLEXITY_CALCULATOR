@@ -13,7 +13,7 @@ def rob(nums: List) -> int:
         rob2 = temp
     return rob2
 
-## O(a)
+## O(b+a)
 # House Robber 2
 def helper(arr: List) -> int:
     rob1, rob2 = 0, 0

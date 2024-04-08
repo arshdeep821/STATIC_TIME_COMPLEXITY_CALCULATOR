@@ -34,7 +34,7 @@ def isAnagram(s: str, t: str) -> bool:
     
     return mapS == mapT
 
-## O(a)
+## O(b)
 class TwoSum:
     def twoSum(self: TwoSum, nums: List, target: int) -> None:
 
@@ -48,53 +48,6 @@ class TwoSum:
                 elem_map[n] = i
 
         return -1
-
-
-# Does not work right now due to difference in for loop
-# def productExceptSelf(nums: List) -> List:
-#     result = []
-#     prefix = []
-#     postfix = [0] * len(nums)
-
-#     curr = nums[0]
-#     for i in range(1, len(nums)):
-#         prefix.append(curr)
-#         curr *= nums[i]
-#     prefix.append(curr)
-
-#     curr = nums[-1]
-#     for i in range(len(nums) - 2, -1, -1):
-#         postfix[i + 1] = curr
-#         curr *= nums[i]
-#     postfix[0] = curr
-
-#     for i in range(len(nums)):
-#         if i == 0:
-#             result.append(postfix[i + 1])
-#         elif i == len(nums) - 1:
-#             result.append(prefix[i - 1])
-#         else:
-#             result.append(prefix[i - 1] * postfix[i + 1])
-#     return result
-    
-## O(a), does not work
-# Concatentation of array
-# def getConcatenation(nums: List) -> List:
-#     ans = []
-#     for i in range(2):
-#         for n in nums:
-#             ans.append(n)
-#     return ans
-
-## O(a), does not work
- # Is Sub Sequence   
-# def isSubsequence(s: str, t: str) -> bool:
-#     i, j = 0, 0
-#     while i < len(s) and j < len(t):
-#         if s[i] == t[j]:
-#             i += 1
-#         j += 1
-#     return i == len(s)
     
 ## O(a)
 # Majority Element

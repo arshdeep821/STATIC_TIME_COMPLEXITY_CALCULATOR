@@ -69,7 +69,7 @@ def dailyTemperatures(temperatures: List) -> List:
 #         stack.append(time)
 #     return len(stack)
 
-## O(blogb + b)
+## O(blogb)
 # Car Fleet
 def carFleet(target: int, arr: List) -> int:
     arr.sort()
