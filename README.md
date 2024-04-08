@@ -6,7 +6,7 @@ Original motivation was to help students who are having trouble in Data Structur
 
 ## Project details - Static vs Dynamic vs Anything Else
 
-Our project uses a static analysis with the help of the Python ast library. We chose a static analysis as then we can look at only input params and figure out a big-O complexity in terms of those input params. NEED TO ADD MORE
+Our project uses a static analysis with the help of the Python ast library. We chose a static analysis as then we can look at only input params and figure out a big-O complexity in terms of those input params. Though a static analysis may over-estimate the run-time, since a static analysis does not require the program to be executed, it can be performed without setting up a runtime environment.
 
 ## Summary of the content of User Studies:
 
