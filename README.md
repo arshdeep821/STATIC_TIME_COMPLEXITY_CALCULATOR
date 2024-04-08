@@ -14,12 +14,11 @@ In conducting the two user studies on our Python run-time analysis tool, partici
 
 ## Evaluation of own work at various stages
 
-#### Initial Implementation:
-
 - Process of selecting an idea took the longest part as we had to figure out approaches on how to implement it (tech stack and libraries) as well as if it could be done statically
-- Setting up the initial visitor pattern was difficult but once a couple visitors were set, adding to the code base to make it more complex one step at a time was much easier
+- Setting up the initial visitor pattern was difficult but once a couple visitors were set, adding to the code base to make it more complex one step at a time was much easier. The first step with the visitor pattern was to figure out how we will actually calculate the time complexity as the visitor is recurssive, thinking of which data structures to use so that we can formulate a time complexity once the visitor was complete took a lot of thinking but once we did, implementation was smooth sailing.
 - Once the basic functions were done of this analyzer we looked into more complex big-O time complexities such as log operations as well as functions calling other user-defined functions
-- Cleaned up code to make more readiable and separate logic into different files
+- While continuously adding features to this static program analysis tool, user studies were conducted at different stages and we did implement some of the feedback or cases where users got confused into our analysis to reduce confusion from the user
+- Cleaned up code to make more readiable and separate logic into different files. Also made the tool a lot easier to run by adding user inputs when you run main.py
 
 Overall we think at each stage the work was completed in an efficient manner, everything we wanted is in this analyzer in the time we had
 
@@ -32,6 +31,7 @@ Overall we think at each stage the work was completed in an efficient manner, ev
 
 ## Team Management and Organization:
 
+- The team management and organization could have been better for this project, some group members had to work more on implementation than others. Though the members who were not able to contribute as much on the technical portion did work on creating the demo video and helped with check reports, documentation, test cases, etc.
 
 ## How to run project
 
