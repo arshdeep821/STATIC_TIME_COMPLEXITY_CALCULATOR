@@ -8,10 +8,6 @@ Original motivation was to help students who are having trouble in Data Structur
 
 Our project uses a static analysis with the help of the Python ast library. We chose a static analysis as then we can look at only input params and figure out a big-O complexity in terms of those input params. Though a static analysis may over-estimate the run-time, since a static analysis does not require the program to be executed, it can be performed without setting up a runtime environment.
 
-## Summary of the content of User Studies:
-
-In conducting the two user studies on our Python run-time analysis tool, participants were asked to test/code non-recursive functions. The first user desired deeper insights into runtime computations and faced challenges with library imports, while developing a factorial function and a linked list traversal. The second user, focusing on "Two Sum" and "Is Valid" problems from Leetcode, valued the tool's ease of use and straight forward Big O notation without needing detailed runtime explanations. The feedback from both participants led to refining the tool's focus on usability and applicability across various programming tasks, opting against detailed computational explanations to enhance user satisfaction and adding the ability to include user-defined functions. All in all, the tool was much enjoyed from both participants as it was quick and easy to receive a big-O notation of the run-time. 
-
 #### Negative Points in our design/implementation and some solutions we implented:
 
 - Initially we were confused about how to traverse the *ast* in order to calculate the time complexiity. We were thinking of just traversing each node at a time using *DFS* but then we found out the python ast library provides a Visitor Pattern which we also learned about in the first half of the course as it makes traversing the tree a lot easier and the code is cleaner. We stuck with this best design principle as it made our work easier and the code more compact (Needed less code to the same thing without the built in visitor)
